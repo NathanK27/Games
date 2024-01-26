@@ -1,19 +1,14 @@
-score = 0
-x = 0
-y = 0
-a = 0
 time = 30
 b = 1
 
 function setup() {
-  createCanvas(400, 400)
+  createCanvas(windowWidth, windowHeight)
 }
 
 function draw() {
   frameRate(1)
   background(255)
-  mole(random(0, 400), random(0, 400))
-  print(score)
+  mole(random(0, windowWidth), random(0, windowHeight))
   textSize(20)
   text('Score: ' + score, 10, 20)
   text('Time: ' + time, 10, 40)
@@ -21,10 +16,10 @@ function draw() {
   if (time == 0) {
     b = 0
     fill(255)
-    rect(0, 0, 400, 400)
+    rect(0, 0, windowWidth, windowHeight)
     fill(0)
-    text('Game Over!' , 150, 200)
-    text('Score ' + score, 150, 250)
+    text('Game Over!' , windowWidth/2, windowHeight/2 - 20)
+    text('Score ' + score, windowWidth/2, windowHeight/2 + 20)
   }
 }
 
