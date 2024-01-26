@@ -1,3 +1,7 @@
+score = 0
+x = 0
+y = 0
+a = 0
 time = 30
 b = 1
 
